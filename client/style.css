@@ -20,6 +20,10 @@ body {
 	max-width: 500px;
 }
 
+.app__status--offline {
+	color: red;
+}
+
 .chat {
 
 }
@@ -36,11 +40,20 @@ body {
 }
 
 .chat__input input {
+	display: inline-block;
+
 	padding: 10px;
+	margin: 10px 0;
 
 	background-color: transparent;
 	border: none;
 
 	color: var(--var-font-color);
 	font-weight: bold;
+
+	font-size: 20px;
+}
+
+.message {
+	display: inline-block;
 }

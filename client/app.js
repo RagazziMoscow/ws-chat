@@ -1,7 +1,6 @@
 const messages = document.getElementsByClassName('chat__messages')[0];
 const form = document.getElementsByClassName('chat__form')[0];
 const input = form.getElementsByTagName('input')[0];
-
 const status = document.getElementsByClassName('app__status')[0];
 
 const socket = new WebSocket("ws://localhost:3000");;
@@ -27,6 +26,7 @@ form.addEventListener('submit', (e) => {
 
 socket.onopen = () => {
 	status.innerHTML = 'ONLINE';
+	status.classList.remove('app__status--offline');
 }
 
 socket.onmessage = (event) => {
@@ -35,4 +35,5 @@ socket.onmessage = (event) => {
 
 socket.onclose = () => {
 	status.innerHTML = 'OFFLINE';
+	status.classList.add('app__status--offline');
 }

@@ -17,7 +17,7 @@ httpServer.listen(port, () => {
 })
 
 webSocketServer.on('connection', (ws) => {
-  ws.on('message', function incoming(data) {
+  ws.on('message', (data) => {
     // Broadcast to everyone else.
     webSocketServer.clients.forEach(function each(client) {
       if (client !== ws && client.readyState === ws.OPEN) {
