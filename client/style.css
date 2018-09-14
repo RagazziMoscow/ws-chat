@@ -1,0 +1,46 @@
+:root{
+	--var-font-color: #3fa402;
+	--var-chat-height: 200px;
+}
+
+body {
+	background-color: black;
+	font-family: sans-serif;
+}
+
+
+.app {
+	color: var(--var-font-color);
+	text-align: center;
+}
+
+.app__chat {
+	margin: 0 auto;
+
+	max-width: 500px;
+}
+
+.chat {
+
+}
+
+.chat__messages {
+	height: var(--var-chat-height);
+	max-height: var(--var-chat-height);
+	overflow-y: auto;
+}
+
+.chat__input {
+	border: 2px solid var(--var-font-color);
+	border-radius: 3px;
+}
+
+.chat__input input {
+	padding: 10px;
+
+	background-color: transparent;
+	border: none;
+
+	color: var(--var-font-color);
+	font-weight: bold;
+}
